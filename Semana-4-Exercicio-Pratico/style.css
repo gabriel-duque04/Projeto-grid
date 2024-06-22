@@ -1,0 +1,287 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;	
+}
+/* Cabecalho*/
+
+header{
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.logo{
+    font-size: 90px; 
+    text-decoration: none; 
+    font-family: 'Raleway',sans-serif;
+    font-weight: bold;
+    line-height: 72px;
+    background-color: rgb(1, 68, 1);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.menu{
+    display: flex;
+}
+
+
+.menu li{
+    list-style: none;
+    margin-left: 10px;
+    text-decoration: none;
+    
+  }
+
+.menu li a{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: rgb(1, 91, 1) ;
+  padding: 5px;
+  border: solid 1px  rgb(0, 46, 0);
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+.menu li a:hover{
+  background-color: rgb(63, 202, 63);
+  color: rgb(0, 41, 0);
+  transition: 0.3s;
+}
+
+
+/*Titulo e categorias*/
+
+
+
+/*Slide*/
+
+.slides{
+  margin:0 auto;
+  width: 900px;
+  height: 350px;
+  overflow: scroll;
+  margin-left: 150px;
+  grid-area: slides;
+}
+
+.slide-botao{
+  width: 400%;
+  height: 350px;
+  display: flex;
+}
+
+.slide-botao input{
+  display: none;
+}
+
+
+.slide-img{
+  width: 25%;
+  position: relative;
+  transition: 0.5s;
+}
+
+.slide-img img{
+  width: 900px;
+  height:350px;
+}
+slide-img-1 img
+
+.manual-navigation{
+  position:absolute;
+  width: 900px;
+  margin-top: -50px;
+  display: flex;
+  justify-content:center;
+}
+
+.manual-btn{
+  border: 2px solid rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background-color: white;
+}
+
+#slide1:checked ~ .first{
+  margin-left:0;
+}
+
+#slide2:checked ~ .first{
+  margin-left:-25%;
+}
+
+#slide3:checked ~ .first{
+  margin-left:-50%;
+}
+/*Posts*/
+
+
+.grid {
+  padding: 10px;
+  max-width: 100%;
+  
+  display: grid;
+    grid-template-areas: 
+      "menu-categorias slides slides" 
+      "post-content post-content post-content"
+      "footer footer footer";
+    
+}
+
+
+
+
+
+
+
+
+
+
+.img-carro{
+  width: 400px;
+}
+
+.post-content{
+  background-color: #5dc65d;
+  padding: 20px;
+  display: inline-block; 
+  width: calc(80% - 16px);
+  vertical-align: top;
+  margin: 25px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.post-content img{
+  background-color: white;
+  border-radius: 8px;
+  display: block;
+  
+}
+
+
+.post ul{
+  list-style: none;
+}
+
+h2{
+  font-size: 40px;
+  color: #022c02;
+}
+
+h3{
+  font-size: 20px;
+  color: #14b314;
+  border: solid 2px #044804;
+  border-radius: 5px;
+  background-color: #044804;
+}
+
+h3:hover{
+  background-color: #14b314;
+  color: #044804;
+}
+
+h1{
+  background-color: rgb(1, 68, 1);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Raleway',sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+
+.menu-categorias{
+  background-color: green;
+  padding: 50px;
+  list-style: none;
+  display: block;
+  line-height: 80px;
+  border-radius: 15px;
+  grid-area: menu-categorias;
+}
+
+
+
+.categorias{
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 8px;
+  border: solid 1px  rgb(0, 46, 0);
+  border-radius: 5px;
+}
+
+.categorias:hover{
+  background-color: rgb(63, 202, 63);
+  color: rgb(0, 41, 0);
+  transition: 0.3s;
+}
+footer{
+  background-color: green;
+  height: 30px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  grid-area: footer;
+}
+
+
+@media screen and (max-width: 600px){
+  .grid{
+    display: block;
+    grid-gap: 20px;
+  }
+  
+ .slides{
+   display: none;
+ }
+
+  .header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+
+
+  .menu-categorias{
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header nav{
+    display: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .logo{
+    text-align: center;
+  }
+
+  .post-content{
+    width: 100%;
+  }
+}
